@@ -1,0 +1,92 @@
+% Persistent identifiers for scientists
+\begin{frame}
+    \frametitle{Persistente Identifier für Wissenschaftler}
+
+    \only<1>{    
+        \framesubtitle{Herausforderung}
+        Jede Ressource ist mit Personen (in unterschiedlichen Rollen) verbunden:
+
+        \begin{block}{Namen als Identifier?}
+            \begin{columns}[T]
+                \column{0.4\textwidth}
+                \begin{table}
+                    \caption{Personenverzeichnis Uni Vechta}
+                    \begin{tabular}[t]{lc}
+                        \toprule
+                        Nachname & Häufigkeit \\
+                        \midrule
+                        Kaiser & 4\\
+                        Meyer  & 4\\
+                        Müller & 4\\ 
+                        \bottomrule
+                    \end{tabular}
+                \end{table}
+
+                \column{0.5\textwidth}
+                \begin{table}
+                    \caption{Beliebteste deutsche Vornamen}
+                    \begin{tabular}[t]{lll}
+                        \toprule
+                        Zeitraum & weiblich & männlich\\
+                        \midrule
+                        1980--1989 & Julia & Christian\\
+                        1990--1999 & Anna & Jan\\
+                        2000--2009 & Anna & Lu[ck]as\\
+                        \bottomrule
+                    \end{tabular}
+                \end{table}
+
+            \end{columns}
+        \end{block}
+
+        \alert{\textbf{Namen sind keine eindeutigen Identifier!}}
+    } % end only 1
+
+    \only<2>{  
+        \framesubtitle{Anforderungen}
+
+        \textbf{Eindeutige ID für jede beteiligte Person}
+
+        \begin{itemize}
+            \item unabhängig von Schreibweise und Wechsel des Namens
+            \item unabhängig von Hochschulwechsel
+            \item in jedem Stadium des FDM verwendbar
+            \item bereits international etabliert (\alert{keine In-House-Lösung})
+            \item \textbf{in XML Schema Definition für Metadaten verwendbar}
+        \end{itemize}
+
+    } % end only 2
+
+    \only<3> {
+        \framesubtitle{ORCID}
+        \begin{block}{ORCID (Open Researcher and Contributor ID)}
+            \begin{itemize}
+                \item Beginn: Oktober 2012; aktuell ca. 3.5 Millionen IDs
+                \item kostenlos
+                \item Open Source (MIT-Lizenz)
+                    % \item unterstützt Publikationslisten (BibTeX)
+            \end{itemize}
+
+
+
+            bei Publikationen unterstützt oder \textbf{zwingend vorgeschrieben} von:
+
+            \begin{itemize}
+                \item American Chemical Society (ACS)
+                    % \item American Geophysical Union (AGU)
+                    % \item eLife
+                \item European Molecular Biology Organization (EMBO) 
+                    % \item Hindawi 
+                    % \item Institute of Electrical & Electronics Engineers (IEEE) 
+                \item Public Library of Science (PLOS) 
+                \item Royal Society of Chemistry (RSC)
+                \item Scopus (Elsevier, auch nachträglich) 
+            \end{itemize}
+
+            \url{orcid.org/0000-0002-1247-4508} Gunther Schmidt (Uni Vechta)
+            \url{orcid.org/0000-0001-6912-3234} Klaus-Dieter Warzecha
+
+        \end{block}
+    } % end only 3
+
+\end{frame}
