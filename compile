@@ -1,2 +1,2 @@
-cd src && latexmk -C && latexmk -bibtex -pdf && mv *.pdf ../build && latexmk -C
+cd src && latexmk -C && latexmk -pdf warzecha-fdm.tex && mv *.pdf ../build && latexmk -C
 
