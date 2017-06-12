@@ -1,0 +1,150 @@
+%
+\documentclass[smaller,t]{beamer}
+
+\usepackage[ngerman]{babel}
+
+\usepackage[utf8]{inputenc}
+
+%\usepackage{mathptmx}
+%\usepackage[scaled=.92]{helvet}
+%\usepackage{courier}
+%\usepackage[T1]{fontenc}
+
+
+% quotation marks for different languages
+\usepackage[autostyle]{csquotes}
+
+\usepackage{amsmath}
+
+% no images in this talk 
+%\usepackage{graphicx}
+
+\usepackage{xcolor}
+
+% nice tables
+\usepackage{booktabs}
+\usepackage{caption}
+
+% no lables (table:, figure, etc.)
+\captionsetup{labelformat=empty}
+
+% mhchem
+% \usepackage[version=4,arrows=pgf]{mhchem}
+% \mhchemoptions{textfontcommand=\sffamily}
+% \mhchemoptions{mathfontcommand=\mathsf}
+
+\usepackage{tikz}
+\usetikzlibrary{arrows, calc}
+
+\usepackage{hyperref}
+\hypersetup{%
+    pdfauthor={Klaus-Dieter Warzecha},%
+    pdftitle={Forschungsdatenmanagement},% 
+    pdfkeywords={forschungsdaten, management, metadaten},%
+    pdfcreator={PDFLaTeX},%
+    pdfproducer={PDFLaTeX},%
+}
+
+
+% beamer theme
+\usetheme{default}
+\usecolortheme{rose}
+
+
+% footline
+\makeatletter
+\setbeamertemplate{footline}{%
+    \leavevmode%
+    \hbox{
+        \begin{beamercolorbox}[wd=.25\paperwidth,ht=2.5ex,dp=1ex,center]{}%
+            \insertshortauthor
+        \end{beamercolorbox}%
+
+        \begin{beamercolorbox}[wd=.25\paperwidth,ht=2.5ex,dp=1ex,center]{}%
+            \insertshorttitle
+        \end{beamercolorbox}
+
+        \begin{beamercolorbox}[wd=.25\paperwidth,ht=2.5ex,dp=1ex,center]{}%
+            \insertshortdate
+        \end{beamercolorbox}
+
+        \begin{beamercolorbox}[wd=.25\paperwidth,ht=2.5ex,dp=1ex,center]{}%
+            \insertframenumber{} / \inserttotalframenumber
+        \end{beamercolorbox}
+    }%
+    \vskip0pt%
+}
+\makeatother
+
+% no headline
+\setbeamertemplate{headline}{}
+
+% no navigation symbols
+\setbeamertemplate{navigation symbols}{}
+\author[K.-D. Warzecha]{Klaus-Dieter Warzecha}
+\date{2017-06-15}
+\title[Forschungsdatenmanagement]{Forschungsdatenmanagement (FDM) in den Natur- und Umweltwissenschaften}
+\subtitle{}
+
+% draw rounded square with diagonal arrow as symbol for external links
+\newcommand{\ExternalLink}{%
+    \tikz[x=1.2ex, y=1.2ex, baseline=-0.05ex]{% 
+        \begin{scope}[x=1ex, y=1ex]
+            \clip (-0.1,-0.1) 
+            --++ (-0, 1.2) 
+            --++ (0.6, 0) 
+            --++ (0, -0.6) 
+            --++ (0.6, 0) 
+            --++ (0, -1);
+            \path[draw, 
+            line width = 0.5, 
+            rounded corners=0.5] 
+            (0,0) rectangle (1,1);
+        \end{scope}
+        \path[draw, line width = 0.5] (0.5, 0.5) 
+        -- (1, 1);
+        \path[draw, line width = 0.5] (0.6, 1) 
+        -- (1, 1) -- (1, 0.6);
+    }
+}
+
+\begin{document}
+
+\begin{frame}
+    \titlepage
+\end{frame}
+
+% definitions of research data by DFG and others
+\input{research_data_definitions.tex}
+
+% life cycle of research data in past and future    
+\input{research_data_lifecycle.tex}
+
+% guidelines
+\input{research_data_management_guidelines.tex}
+
+% license models
+\input{licenses.tex}
+
+% ORCID - persistent identifiers for scientists
+\input{orcid.tex}
+
+% file formats
+\input{file_formats.tex}
+
+%metadata
+\input{metadata.tex}
+
+% doi registrars
+\input{doi_registrars.tex}
+
+% existing repositories and frameworks/turnkey solutions for inistitutional repos
+\input{repositories.tex}
+
+% strategies for the implementation
+\input{first_steps.tex}
+
+
+\end{document}
+
+
