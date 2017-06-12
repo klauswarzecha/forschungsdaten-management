@@ -1,0 +1,2 @@
+cd src && latexmk -C && latexmk -bibtex -pdf && mv *.pdf ../build && latexmk -C
+
